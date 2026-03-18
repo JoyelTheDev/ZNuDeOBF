@@ -11,6 +11,7 @@ import uwu.narumi.deobfuscator.api.asm.MethodContext;
 import uwu.narumi.deobfuscator.api.asm.matcher.Match;
 import uwu.narumi.deobfuscator.api.asm.matcher.MatchContext;
 import uwu.narumi.deobfuscator.api.asm.matcher.group.AnyMatch;
+import uwu.narumi.deobfuscator.api.asm.matcher.group.SequenceMatch;
 import uwu.narumi.deobfuscator.api.asm.matcher.impl.FieldMatch;
 import uwu.narumi.deobfuscator.api.asm.matcher.impl.FrameMatch;
 import uwu.narumi.deobfuscator.api.asm.matcher.impl.InsnMatch;
@@ -24,6 +25,7 @@ import uwu.narumi.deobfuscator.api.transformer.Transformer;
 
 import java.util.Objects;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Transforms number pool references to actual values.

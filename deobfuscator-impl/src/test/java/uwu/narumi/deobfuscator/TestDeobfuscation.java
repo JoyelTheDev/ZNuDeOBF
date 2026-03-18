@@ -172,8 +172,8 @@ public class TestDeobfuscation extends TestDeobfuscationBase {
         .inputClassesDir(InputType.CUSTOM_CLASS, "qprotect/sample2")
         .register();
 
-    test("qProtect Sample 3")
-        .transformers(Composed_qProtectTransformer::new)
+    test("qProtect Strong String Sample 3")
+        .transformers(() -> new Composed_qProtectTransformer(true))
         .inputClassesDir(InputType.CUSTOM_CLASS, "qprotect/sample3")
         .register();
 
